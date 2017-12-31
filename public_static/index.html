@@ -9,7 +9,40 @@
   <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
-<h1> HEllo </h1>
+<div class="container">
+  <div class="row">
+    <h1 class="col-12 text-center">
+      TodoList
+    </h1>
+  </div>
+  <div class="row mt-4">
+    <div class="col-6 ml-auto form-group">
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-2 mr-auto">
+      <button class="btn btn-success">Add</button>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col"></div>
+    <ul class="col-9 list-group">
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-10">
+            Task 1
+          </div>
+          <div class="col-1 input-group">
+            <input class="form-control" type="checkbox">
+          </div>
+          <div class="col-1">
+            <i class="fa fa-trash"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="col"></div>
+  </div>
+</div>
 
 
 <script src="./js/jquery-3.2.1.js"></script>

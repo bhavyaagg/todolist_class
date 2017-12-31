@@ -6,7 +6,23 @@ const app = express();
 
 const path = require('path');
 
-app.get('/hello', function (req, res, next) {
+const todos = [];
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
+app.get('/todos', function (req, res) {
+  res.send(todos);
+})
+
+app.post('/todos', function (req, res) {
+  todos.push({
+    task: req.body.task,
+    done: req.body.done
+  });
+  res.send({success: true});
+})
+
+app.get('/hello', function (req, res) {
   res.send("Hello")
 });
 
