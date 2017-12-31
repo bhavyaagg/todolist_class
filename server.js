@@ -17,9 +17,18 @@ app.get('/todos', function (req, res) {
 app.post('/todos', function (req, res) {
   todos.push({
     task: req.body.task,
-    done: req.body.done
+    done: false
   });
-  res.send({success: true});
+  console.log(todos)
+  res.send(
+    {
+      success: true,
+      todos: todos
+    });
+})
+
+app.post('/todos/:id', function (req, res) {
+  console.log(req.params.id);
 })
 
 app.get('/hello', function (req, res) {
